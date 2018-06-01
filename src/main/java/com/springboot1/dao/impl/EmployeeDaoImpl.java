@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -17,6 +18,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 
     @Override
+    @Transactional(readOnly = false)
     public List<Employee> getAll() {
 
         Session session = sessionFactory.getCurrentSession();
