@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional(readOnly = false)
+@Transactional
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
