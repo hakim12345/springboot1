@@ -22,6 +22,9 @@ public class City {
     @JoinColumn(name = "state_id" , referencedColumnName = "id")
     private State state;
 
+    public City() {
+        super();
+    }
 
     public void setId(Integer id) {
         this.id = id;

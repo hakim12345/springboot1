@@ -22,6 +22,10 @@ public class State {
     private Country country;
 
 
+    public State() {
+        super();
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }

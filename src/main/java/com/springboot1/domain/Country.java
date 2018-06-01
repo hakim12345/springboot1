@@ -17,6 +17,10 @@ public class Country {
     @Column(name = "name" , length = 40 , nullable = false)
     private String name;
 
+    public Country() {
+        super();
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }

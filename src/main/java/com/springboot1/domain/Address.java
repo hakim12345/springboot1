@@ -30,6 +30,9 @@ public class Address {
     @JoinColumn(name = "country_id" , referencedColumnName = "id")
     private Country country;
 
+    public Address() {
+        super();
+    }
 
     public void setId(Integer id) {
         this.id = id;

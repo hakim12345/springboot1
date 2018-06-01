@@ -21,6 +21,10 @@ public class Employee {
     @JoinColumn(name = "address_id" , referencedColumnName = "id")
     private Address address;
 
+    public Employee() {
+        super();
+    }
+
     public Integer getId() {
         return id;
     }

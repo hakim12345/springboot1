@@ -17,7 +17,6 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Autowired
     private SessionFactory sessionFactory;
 
-
     @Override
     @Transactional(readOnly = false)
     public List<Employee> getAll() {
