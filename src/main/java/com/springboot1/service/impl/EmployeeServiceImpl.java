@@ -10,16 +10,29 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
+@Transactional(readOnly = false)
 public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EmployeeDao employeeDao;
 
     @Override
+    @Transactional(readOnly = false)
     public List<Employee> getAll() {
 
-        List<Employee> employeeList = employeeDao.getAll();
-        return employeeList;
+        return employeeDao.getAll();
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public void create(Employee employee) {
+       employeeDao.create(employee);
+    }
+
+    @Override
+    @Transactional(readOnly = false)
+    public Employee getById(int id) {
+
+        return employeeDao.getById(id);
     }
 }
