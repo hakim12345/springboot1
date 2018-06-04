@@ -1,6 +1,7 @@
 package com.springboot1.domain;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.springframework.context.annotation.Lazy;
 
 import javax.persistence.*;
 
@@ -17,7 +18,7 @@ public class Employee {
     @Column(name = "NAME" , nullable = false , length = 40)
     private String name;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL ,  fetch = FetchType.LAZY)
     @JoinColumn(name = "address_id" , referencedColumnName = "id")
     private Address address;
 

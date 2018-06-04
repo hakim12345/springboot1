@@ -1,4 +1,4 @@
-package com.springboot1.controller;
+package com.springboot1.web.controller;
 
 
 import com.springboot1.domain.Employee;
